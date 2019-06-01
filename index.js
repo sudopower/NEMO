@@ -1,11 +1,10 @@
   var express = require("express");
   var app = express();
-  const fs = require('fs')
   const multer  = require('multer')
   const Tesseract  = require('tesseract.js')
   var mongoose = require("mongoose");
 
-  const port = process.env.port || 3000;
+  const port = process.env.PORT || 3000;
   const upload = multer({ dest: './public/images/' })
   mongoose.Promise = global.Promise;
   mongoose.connect("mongodb://localhost:27017/node-demo", {useNewUrlParser: true});
