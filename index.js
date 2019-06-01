@@ -7,7 +7,7 @@
   const port = process.env.PORT || 3000;
   const upload = multer({ dest: './public/images/' })
   mongoose.Promise = global.Promise;
-  mongoose.connect("mongodb://localhost:27017/node-demo", {useNewUrlParser: true});
+  mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds231207.mlab.com:31207/heroku_jv3tzfrw", {useNewUrlParser: true});
   var nameSchema = new mongoose.Schema({
       name: String,
       phone: String,
